@@ -273,7 +273,8 @@ public class VowelOrConsonant {
     }
 
     public static String checkViaAsciiEnglish(char c) {
-        if (c == 97 || c == 65 || c == 101 || c == 69 || c == 105 || c == 73 || c == 111 || c == 79 || c == 85 || c == 117)
+        if (c == 97 || c == 65 || c == 101 || c == 69 || c == 105 || c == 73
+                || c == 111 || c == 79 || c == 85 || c == 117)
             return VOWEL;
         else {
             return CONSONANT;
@@ -281,7 +282,8 @@ public class VowelOrConsonant {
     }
 
     public static String checkViaAsciiRussian(char c) {
-        if (c == 1040 || c == 1072 || c == 1045 || c == 1077 || c == 1048 || c == 1080 || c == 1054 || c == 1086 || c == 1059
+        if (c == 1040 || c == 1072 || c == 1045 || c == 1077 || c == 1048
+                || c == 1080 || c == 1054 || c == 1086 || c == 1059
                 || c == 1091 || c == 1067 || c == 1099 || c == 1070 || c == 1102 || c == 1071 || c == 1103) {
             return VOWEL_RUS;
         } else {

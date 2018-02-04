@@ -7,6 +7,7 @@ public class Inputter {
         System.out.println(msg);
         return new Scanner(System.in).nextInt();
     }
+
     public static String inputChar(String msg) {
         System.out.println(msg);
         return new Scanner(System.in).next();

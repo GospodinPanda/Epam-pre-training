@@ -3,14 +3,16 @@ package by.harshunou.SecondTask;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        System.setProperty("console.encoding","utf-8");
-        int n = Inputter.inputInt("Введите число");
-        System.out.println("The count of " + n + " year old dragon heads is: " + DragonHeads.DragonHeadsCounter(n));
-        System.out.println("The count of " + n + " year old dragon eyes is: " + DragonHeads.DragonEyesCounter(n));
-        System.out.println(VowelOrConsonant.checkTheLetter(Inputter.inputChar("Введите букву").charAt(0)));
-        System.out.println( MoodSensor.generateMood());
-        System.out.println(NextDaySolver.whatIsTheNextDay(31,12,2002));
+
+        int dragonsAge = 500;
+
+        System.out.println("The count of " + dragonsAge + " year old dragon heads is: " + DragonHeads.dragonHeadsCounter(dragonsAge));
+        System.out.println("The count of " + dragonsAge + " year old dragon eyes is: " + DragonHeads.dragonEyesCounter(dragonsAge));
+        System.out.println(VowelOrConsonant.checkTheLetter('c'));
+        System.out.println(VowelOrConsonant.checkTheLetter('o'));
+        System.out.println(MoodSensor.generateMood());
+        System.out.println(NextDaySolver.whatIsTheNextDay(31, 12, 2002));
+        System.out.println(NextDaySolver.whatIsTheNextDay(30, 11, 2007));
         System.out.println(FiguresToWords.transform(777));
     }
 }

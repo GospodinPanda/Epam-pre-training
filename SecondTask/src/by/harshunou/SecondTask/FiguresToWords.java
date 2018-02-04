@@ -2,32 +2,27 @@ package by.harshunou.SecondTask;
 
 public class FiguresToWords {
     public static String transform(int count) {
-        String string = "Ошибка";
+        String resultString = "Error";
         if (count < 10) {
             return decade(count);
         } else if (count >= 10 && count < 20) {
-            string = tenAndMore(count);
-            return (string);
+            resultString = tenAndMore(count);
+            return (resultString);
         } else if (count >= 20 && count < 100) {
-            string = tenAndMore(count);
-            string += decade(count);
-            return string;
+            resultString = dozens(count);
+            resultString += decade(count);
+            return resultString;
         } else if (count >= 100 && count < 1000) {
-            string = null;
-           string=hundreds(count);
-            count %= 100;
-            if (count >= 10 && count < 20) {
-                string += tenAndMore(count);
-
+            resultString = hundreds(count);
+            if ((count %= 100) >= 10 && count < 20) {
+                resultString += tenAndMore(count);
             } else if (count > 20 && count < 100) {
-                string += tenAndMore(count);
-                string += decade(count);
-
+                resultString += dozens(count);
+                resultString += decade(count);
             }
-            return string;
-        }
-        else {
-            return "error";
+            return resultString;
+        } else {
+            return resultString;
         }
     }
 
@@ -68,54 +63,53 @@ public class FiguresToWords {
     }
 
     private static String tenAndMore(int count) {
-        if (count >= 10 && count < 20) {
-            switch (count) {
-                case 10:
-                    return " десять";
-                case 11:
-                    return " одиннадцать";
-                case 12:
-                    return " двенадцать";
-                case 13:
-                    return " тринадцать";
-                case 14:
-                    return " четырнадцать";
-                case 15:
-                    return " пятнадцать";
-                case 16:
-                    return " шестнадцать";
-                case 17:
-                    return " семнадцать";
-                case 18:
-                    return " восемнадцать";
-                case 19:
-                    return " девятнадцать";
-                default:
-                    return "???";
-            }
-        } else if (count > 20 && count < 100) {
-            switch (count / 10) {
-                case 2:
-                    return " двадцать";
-                case 3:
-                    return " тридцать";
-                case 4:
-                    return " сорок";
-                case 5:
-                    return " пятьдесят";
-                case 6:
-                    return " шестьдесят";
-                case 7:
-                    return " семьдесят";
-                case 8:
-                    return " восемьдесят";
-                case 9:
-                    return " девяносто";
-                default:
-                    return "???";
-            }
-        } else {
-            return "error";
+        switch (count) {
+            case 10:
+                return " десять";
+            case 11:
+                return " одиннадцать";
+            case 12:
+                return " двенадцать";
+            case 13:
+                return " тринадцать";
+            case 14:
+                return " четырнадцать";
+            case 15:
+                return " пятнадцать";
+            case 16:
+                return " шестнадцать";
+            case 17:
+                return " семнадцать";
+            case 18:
+                return " восемнадцать";
+            case 19:
+                return " девятнадцать";
+            default:
+                return "???";
+        }
+    }
+
+
+    private static String dozens(int count) {
+        switch (count / 10) {
+            case 2:
+                return " двадцать";
+            case 3:
+                return " тридцать";
+            case 4:
+                return " сорок";
+            case 5:
+                return " пятьдесят";
+            case 6:
+                return " шестьдесят";
+            case 7:
+                return " семьдесят";
+            case 8:
+                return " восемьдесят";
+            case 9:
+                return " девяносто";
+            default:
+                return "???";
         }
     }
 
