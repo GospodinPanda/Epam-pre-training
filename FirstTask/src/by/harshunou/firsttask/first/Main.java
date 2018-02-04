@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         // dinosaur in
-        int weightInGramms = 2600000;
-        System.out.println("First task. The weight of a Dinosaur in kilos:" + HeavyDinosaur.calcInKilo(weightInGramms));
-        System.out.println("First task. The weight of a Dinosaur in tons:" + HeavyDinosaur.calcInTons(weightInGramms));
+        int weightInGrams = 2600000;
+        System.out.println("First task. The weight of a Dinosaur in kilos:" + HeavyDinosaur.calcInKilo(weightInGrams));
+        System.out.println("First task. The weight of a Dinosaur in tons:" + HeavyDinosaur.calcInTons(weightInGrams));
 
         //two rounds R1>R2. Find sqr of the ring
         int R1 = 5;
@@ -16,28 +16,28 @@ public class Main {
         //two ints to swap.
         int a = 6;
         int b = -8;
-        EasySwap.SwapInts(a, b);
+        EasySwap.swapInts(a, b);
 
         //check the number for sequence
         int TrueSequenceForward = 1345;
         int TrueSequenceBackward = 5432;
         int FalseSequenceBackward = 1435;
-        System.out.println("Check for the True Backward Sequence: "+CheckForSequence.check(TrueSequenceBackward));
-        System.out.println("Check for the True Forward Sequence: "+CheckForSequence.check(TrueSequenceForward));
-        System.out.println("Check for the False Backward Sequence: "+CheckForSequence.check(FalseSequenceBackward));
+        System.out.println("Check for the True Backward Sequence: " + CheckForSequence.isSequence(TrueSequenceBackward));
+        System.out.println("Check for the True Forward Sequence: " + CheckForSequence.isSequence(TrueSequenceForward));
+        System.out.println("Check for the False Backward Sequence: " + CheckForSequence.isSequence(FalseSequenceBackward));
 
         //get the sum and comp of the figures in the number
         int fiveFigures = 12213;
-        System.out.println("Sum is: "+SumAndComp.summ(fiveFigures));
-        System.out.println("Comp is: "+SumAndComp.composition(fiveFigures));
+        System.out.println("Sum is: " + SumAndComp.summ(fiveFigures));
+        System.out.println("Comp is: " + SumAndComp.composition(fiveFigures));
 
-        //get the arifm and geom of the figures in the number
+        //get the arithm and geom of the figures in the number
         int sixFigures = 123456;
-        System.out.println("Average: " + ArifmAndGeom.arifm(sixFigures));
-        System.out.println("The geometric mean: " + ArifmAndGeom.geometr(sixFigures));
+        System.out.println("Average: " + ArithmAndGeom.countArithm(sixFigures));
+        System.out.println("The geometric mean: " + ArithmAndGeom.countGeom(sixFigures));
 
         //reverse int with 7 figures in it
         int sevenFigures = 1234567;
-        System.out.println("Reversed number is:"+ReverseOfInt.calculate(sevenFigures));
+        System.out.println("Reversed number is:" + ReverseOfInt.calculate(sevenFigures));
     }
 }
