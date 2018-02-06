@@ -14,9 +14,9 @@ public class DragonHeads {
         if (n >= 0 && n < MATURE_DRAGON_AGE) {
             heads += n * MATURE_DRAGON_HEADS_INCOME;
         } else if (n >= MATURE_DRAGON_AGE && n < OLD_DRAGON_AGE) {
-            heads += MATURE_DRAGON_HEADS_COUNT + ((n - MATURE_DRAGON_AGE) * OLD_DRAGON_HEADS_INCOME);
+            heads += MATURE_DRAGON_HEADS_COUNT -MATURE_DRAGON_AGE*OLD_DRAGON_HEADS_INCOME+ n * OLD_DRAGON_HEADS_INCOME;
         } else if (n >= OLD_DRAGON_AGE) {
-            heads += OLD_DRAGON_HEADS_COUNT + (n - OLD_DRAGON_AGE);
+            heads += OLD_DRAGON_HEADS_COUNT -OLD_DRAGON_AGE+ n ;
         }
         return heads;
     }

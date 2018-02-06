@@ -3,9 +3,10 @@ package by.harshunou.SecondTask;
 import java.util.Random;
 
 public class MoodSensor {
+    public static final int RANDOM_LIMIT=10;
     public static String generateMood() {
         Random random = new Random(System.currentTimeMillis());
-        switch (random.nextInt(10)) {
+        switch (random.nextInt(RANDOM_LIMIT)) {
             case 0:
                 return ":)";
             case 1:

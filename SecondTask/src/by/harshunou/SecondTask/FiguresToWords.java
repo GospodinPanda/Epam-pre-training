@@ -4,14 +4,12 @@ public class FiguresToWords {
     public static String transform(int count) {
         String resultString = "Error";
         if (count < 10) {
-            return decade(count);
+            resultString = decade(count);
         } else if (count >= 10 && count < 20) {
             resultString = tenAndMore(count);
-            return (resultString);
         } else if (count >= 20 && count < 100) {
             resultString = dozens(count);
             resultString += decade(count);
-            return resultString;
         } else if (count >= 100 && count < 1000) {
             resultString = hundreds(count);
             if ((count %= 100) >= 10 && count < 20) {
@@ -19,123 +17,161 @@ public class FiguresToWords {
             } else if (count > 20 && count < 100) {
                 resultString += dozens(count);
                 resultString += decade(count);
+            } else if (count < 10) {
+                resultString += decade(count);
             }
-            return resultString;
-        } else {
-            return resultString;
+
         }
+        return resultString;
     }
 
 
     private static String decade(int count) {
+        String temporaryString = null;
         switch (count % 10) {
             case 0:
-                return "";
+                temporaryString = "";
+                break;
             case 1:
-                return " один";
-
+                temporaryString = " один";
+                break;
             case 2:
-                return " два";
-
+                temporaryString = " два";
+                break;
             case 3:
-                return " три";
-
+                temporaryString = " три";
+                break;
             case 4:
-                return " четыре";
-
+                temporaryString = " четыре";
+                break;
             case 5:
-                return " пять";
-
+                temporaryString = " пять";
+                break;
             case 6:
-                return " шесть";
-
+                temporaryString = " шесть";
+                break;
             case 7:
-                return " семь";
-
+                temporaryString = " семь";
+                break;
             case 8:
-                return " восемь";
-
+                temporaryString = " восемь";
+                break;
             case 9:
-                return " девять";
+                temporaryString = " девять";
+                break;
             default:
-                return "???";
+                temporaryString = "???";
         }
+        return temporaryString;
     }
 
     private static String tenAndMore(int count) {
+        String temporaryString = "???";
         switch (count) {
             case 10:
-                return " десять";
+                temporaryString = " десять";
+                break;
             case 11:
-                return " одиннадцать";
+                temporaryString = " одиннадцать";
+                break;
             case 12:
-                return " двенадцать";
+                temporaryString = " двенадцать";
+                break;
             case 13:
-                return " тринадцать";
+                temporaryString = " тринадцать";
+                break;
             case 14:
-                return " четырнадцать";
+                temporaryString = " четырнадцать";
+                break;
             case 15:
-                return " пятнадцать";
+                temporaryString = " пятнадцать";
+                break;
             case 16:
-                return " шестнадцать";
+                temporaryString = " шестнадцать";
+                break;
             case 17:
-                return " семнадцать";
+                temporaryString = " семнадцать";
+                break;
             case 18:
-                return " восемнадцать";
+                temporaryString = " восемнадцать";
+                break;
             case 19:
-                return " девятнадцать";
+                temporaryString = " девятнадцать";
+                break;
             default:
-                return "???";
+                temporaryString = "???";
         }
+        return temporaryString;
     }
 
 
     private static String dozens(int count) {
+        String temporaryString = "???";
         switch (count / 10) {
             case 2:
-                return " двадцать";
+                temporaryString = " двадцать";
+                break;
             case 3:
-                return " тридцать";
+                temporaryString = " тридцать";
+                break;
             case 4:
-                return " сорок";
+                temporaryString = " сорок";
+                break;
             case 5:
-                return " пятьдесят";
+                temporaryString = " пятьдесят";
+                break;
             case 6:
-                return " шестьдесят";
+                temporaryString = " шестьдесят";
+                break;
             case 7:
-                return " семьдесят";
+                temporaryString = " семьдесят";
+                break;
             case 8:
-                return " восемьдесят";
+                temporaryString = " восемьдесят";
+                break;
             case 9:
-                return " девяносто";
+                temporaryString = " девяносто";
+                break;
             default:
-                return "???";
+                temporaryString = "???";
         }
+        return temporaryString;
     }
 
     private static String hundreds(int count) {
+        String temporaryString = "???";
         switch (count / 100) {
             case 1:
-                return "Сто";
+                temporaryString = "Сто";
+                break;
             case 2:
-                return "Двести";
+                temporaryString = "Двести";
+                break;
             case 3:
-                return "Триста";
+                temporaryString = "Триста";
+                break;
             case 4:
-                return "Четыреста";
+                temporaryString = "Четыреста";
+                break;
             case 5:
-                return "Пятьсот";
+                temporaryString = "Пятьсот";
+                break;
             case 6:
-                return "Шестьсот";
+                temporaryString = "Шестьсот";
+                break;
             case 7:
-                return "Семьсот";
+                temporaryString = "Семьсот";
+                break;
             case 8:
-                return "Восемьсот";
+                temporaryString = "Восемьсот";
+                break;
             case 9:
-                return "Девятьсот";
+                temporaryString = "Девятьсот";
+                break;
             default:
-                return "???";
+                temporaryString = "???";
         }
+        return temporaryString;
     }
 }
 
