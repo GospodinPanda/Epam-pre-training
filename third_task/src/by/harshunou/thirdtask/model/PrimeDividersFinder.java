@@ -1,10 +1,10 @@
 package by.harshunou.thirdtask.model;
 
-public class FindAllPrimeDividers {
+public class PrimeDividersFinder {
         public static String findPrimeDividers(int number){
             String resultString = "";
-            for (int i = 1; i <= number; i++){
-                if((number % i == 0)&&(CheckForPrime.isPrime(i))){
+            for (int i = 1; i <= number/2; i++){
+                if((number % i == 0)&&(PrimeChecker.checkPrime(i))){
                     resultString += i+" ";
                 }
             }

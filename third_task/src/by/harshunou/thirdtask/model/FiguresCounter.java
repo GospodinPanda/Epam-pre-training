@@ -1,7 +1,7 @@
 package by.harshunou.thirdtask.model;
 
-public class CheckCountOfFigures {
-    public static int getNumberOfDifferentFigures(int numberToCheck) {
+public class FiguresCounter {
+    public static int countNumberOfDifferentFigures(int numberToCheck) {
         int tempNumber ;
         int lastNumber;
         int countOfDifferentFigure = 0;

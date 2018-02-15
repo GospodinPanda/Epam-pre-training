@@ -3,12 +3,11 @@ package by.harshunou.thirdtask.model;
 import java.util.Random;
 
 public class HeadsOrTails {
-    public static final int TOSSES = 1000;
 
-    public static int getTails() {
+    public static int getTails(int tosses) {
         int tails = 0;
         Random random = new Random();
-        for (int i = 0; i < TOSSES; i++) {
+        for (int i = 0; i < tosses; i++) {
             if (random.nextBoolean()) {
                 tails++;
             }

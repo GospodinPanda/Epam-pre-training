@@ -1,7 +1,7 @@
 package by.harshunou.thirdtask.model;
 
-public class CheckForPrime {
-    public static boolean isPrime(int numberToCheck) {
+public class PrimeChecker {
+    public static boolean checkPrime(int numberToCheck) {
         boolean isPrime = true;
         int sqrtOfANumber = (int) Math.sqrt(numberToCheck);
         if (numberToCheck == 2) {
