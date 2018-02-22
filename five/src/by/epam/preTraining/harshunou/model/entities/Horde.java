@@ -12,12 +12,12 @@ public class Horde {
     private CustomArrayInterface<DemonBloodCreature> orcs;
 
 
-
-    public Horde() throws WrongInputException {
-        this.tribeName = OrcArmyGenerator.generateTribeName();
-        this.orcs = OrcArmyGenerator.generateHorde();
+    public Horde(String tribeName, CustomArrayInterface<DemonBloodCreature> orcs) throws WrongInputException {
+        this.tribeName = tribeName;
+        this.orcs = orcs;
 
     }
+
     public String getTribeName() {
         return tribeName;
     }
@@ -34,50 +34,43 @@ public class Horde {
         this.orcs = orcs;
     }
 
-    public int calculateAvgLoyaltyOfHorde() throws WrongInputException
-    {
-        int sum=0;
-        for(int i=0;i<orcs.size();i++){
-            DemonBloodCreature currentFlesh =orcs.get(i);
-            sum+=currentFlesh.getLoyaltyToTribe();
+    public int calculateAvgLoyaltyOfHorde() throws WrongInputException {
+        int sum = 0;
+        for (int i = 0; i < orcs.size(); i++) {
+            DemonBloodCreature currentFlesh = orcs.get(i);
+            sum += currentFlesh.getLoyaltyToTribe();
         }
-        return sum/orcs.size();
+        return sum / orcs.size();
     }
 
-    public DemonBloodCreature findStrongestCreature() throws WrongInputException
-    {
-        int str=-1;
-        int temp=-1;
-        for(int i=0;i<orcs.size();i++)
-        {
-            if(str<orcs.get(i).getStrength())
-            {
-                str=orcs.get(i).getStrength();
-                temp=i;
+    public DemonBloodCreature findStrongestCreature() throws WrongInputException {
+        int str = -1;
+        int temp = -1;
+        for (int i = 0; i < orcs.size(); i++) {
+            if (str < orcs.get(i).getStrength()) {
+                str = orcs.get(i).getStrength();
+                temp = i;
             }
         }
         return orcs.get(temp);
     }
-    public DemonBloodCreature findWeakestCreature() throws WrongInputException
-    {
-        int str=11;
-        int temp=-1;
-        for(int i=0;i<orcs.size();i++)
-        {
-            if(str>orcs.get(i).getStrength())
-            {
-                str=orcs.get(i).getStrength();
-                temp=i;
+
+    public DemonBloodCreature findWeakestCreature() throws WrongInputException {
+        int str = 11;
+        int temp = -1;
+        for (int i = 0; i < orcs.size(); i++) {
+            if (str > orcs.get(i).getStrength()) {
+                str = orcs.get(i).getStrength();
+                temp = i;
             }
         }
         return orcs.get(temp);
     }
-    public int calculateExplosiveGoblinsCount() throws WrongInputException
-    {
-        int count =0;
-        for(int i=0;i<orcs.size();i++)
-        {
-            if(orcs.get(i) instanceof Goblin && ((Goblin) orcs.get(i)).isExplodes())
+
+    public int calculateExplosiveGoblinsCount() throws WrongInputException {
+        int count = 0;
+        for (int i = 0; i < orcs.size(); i++) {
+            if (orcs.get(i) instanceof Goblin && ((Goblin) orcs.get(i)).isExplodes())
                 count++;
         }
         return count;

@@ -15,35 +15,38 @@ public class DemonBloodCreatureGenerator {
             "Nag", "Ysagubar", "Kukgilug", "Nulgha", "Wrukaog", "Zuhgan", "Yatur", "Shagrol", "Jukkhag", "Nargol",
             "Lazgar", "Rulfim", "Snak", "Glasha", "Bum", "Nargol", "Rolfish", "Sharamph", " Bulfim"};
 
-    private final static String[] ORC_FIGHTER_CLASS={"Warrior","Berserk","Shaman","Hunter","The Mountain","Flesh Shield"};
+    private final static String[] ORC_FIGHTER_CLASS = {"Warrior", "Berserk", "Shaman", "Hunter", "The Mountain", "Flesh Shield"};
     private final static int MAXIMUM_LOYALTY = 100;
     private final static int MAXIMUM_CRIT = 100;
     private final static int MAXIMUM_RAGE = 5;
 
-    public static DemonBloodCreature generateDemonBlooded() throws WrongInputException{
-        Random random=new Random();
+    public static DemonBloodCreature generateDemonBlooded() throws WrongInputException {
+        Random random = new Random();
         DemonBloodCreature demonBloodCreature;
-        switch (random.nextInt(3)){
-            case 0: demonBloodCreature=new Orc(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
-                    random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),
-                    random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_LOYALTY),
-                    ORC_FIGHTER_CLASS[random.nextInt(ORC_FIGHTER_CLASS.length)],random.nextInt(MAXIMUM_RAGE));
-            break;
-            case 1: demonBloodCreature=new Troll(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
-                    random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),
-                    random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_LOYALTY),
-                    random.nextInt(MAXIMUM_CRIT),random.nextBoolean());
-            break;
-            case 2: demonBloodCreature=new Goblin(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
-                    random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),
-                    random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_LOYALTY),
-                    random.nextBoolean());
-            break;
+        switch (random.nextInt(3)) {
+            case 0:
+                demonBloodCreature = new Orc(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT),
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_LOYALTY),
+                        ORC_FIGHTER_CLASS[random.nextInt(ORC_FIGHTER_CLASS.length)], random.nextInt(MAXIMUM_RAGE));
+                break;
+            case 1:
+                demonBloodCreature = new Troll(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT),
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_LOYALTY),
+                        random.nextInt(MAXIMUM_CRIT), random.nextBoolean());
+                break;
+            case 2:
+                demonBloodCreature = new Goblin(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT),
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_LOYALTY),
+                        random.nextBoolean());
+                break;
             default:
-                demonBloodCreature=new Orc(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
-                        random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_STAT),
-                        random.nextInt(MAXIMUM_STAT),random.nextInt(MAXIMUM_LOYALTY),
-                        ORC_FIGHTER_CLASS[random.nextInt(ORC_FIGHTER_CLASS.length)],random.nextInt(MAXIMUM_RAGE));
+                demonBloodCreature = new Orc(ORC_NAMES[random.nextInt(ORC_NAMES.length)],
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_STAT),
+                        random.nextInt(MAXIMUM_STAT), random.nextInt(MAXIMUM_LOYALTY),
+                        ORC_FIGHTER_CLASS[random.nextInt(ORC_FIGHTER_CLASS.length)], random.nextInt(MAXIMUM_RAGE));
         }
         return demonBloodCreature;
     }

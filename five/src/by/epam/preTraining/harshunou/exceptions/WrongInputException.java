@@ -1,7 +1,7 @@
 package by.epam.preTraining.harshunou.exceptions;
 
 public class WrongInputException extends ArmyBuilderProjectException {
-    public WrongInputException()  {
+    public WrongInputException() {
         super();
     }
 

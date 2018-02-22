@@ -60,8 +60,7 @@ public class Troll extends DemonBloodCreature {
     @Override
     public String toString() {
         return "Troll{" +
-                "name:" + super.getName() +
-                "loyalty to tribe: " + super.getLoyaltyToTribe() +
+                super.toString() +
                 "criticalChance=" + criticalChance +
                 ", cannibal=" + cannibal +
                 '}';

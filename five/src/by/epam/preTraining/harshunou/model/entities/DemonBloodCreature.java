@@ -101,13 +101,11 @@ public class DemonBloodCreature {
 
     @Override
     public String toString() {
-        return "DemonBloodCreature{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", strength=" + strength +
                 ", dexterity=" + dexterity +
                 ", constitution=" + constitution +
                 ", intel=" + intel +
-                ", loyaltyToTribe=" + loyaltyToTribe +
-                '}';
+                ", loyaltyToTribe=" + loyaltyToTribe+ " ";
     }
 }

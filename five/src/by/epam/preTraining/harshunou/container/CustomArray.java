@@ -48,11 +48,10 @@ public class CustomArray<T> implements CustomArrayInterface<T> {
             array = (T[]) new Object[temp.length - 1];
             this.length = temp.length - 1;
             for (int i = 0; i < index; i++) {
-                    array[i] = temp[i];
+                array[i] = temp[i];
             }
-            for(int i=index-1;i<array.length;i++)
-            {
-                array[i]=temp[i+1];
+            for (int i = index - 1; i < array.length; i++) {
+                array[i] = temp[i + 1];
             }
         } catch (IndexOutOfBoundsException e) {
             throw new WrongInputException("There is no such index here");

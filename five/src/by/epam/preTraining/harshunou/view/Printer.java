@@ -5,7 +5,4 @@ public class Printer {
         System.out.println(msg);
     }
 
-    public static void errorPrint(Object msg) {
-        System.err.println(msg);
-    }
 }

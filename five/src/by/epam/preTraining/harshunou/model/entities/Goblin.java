@@ -46,9 +46,8 @@ public class Goblin extends DemonBloodCreature {
     @Override
     public String toString() {
         return "Goblin{" +
-                " name: " + super.getName() +
-                " Loyalty to tribe: " + super.getLoyaltyToTribe() +
-                " explodes= "  + explodes +
+                super.toString() +
+                " explodes= " + explodes +
                 '}';
     }
 }

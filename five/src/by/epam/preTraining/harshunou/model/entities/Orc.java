@@ -43,8 +43,7 @@ public class Orc extends DemonBloodCreature {
     @Override
     public String toString() {
         return "Orc{" +
-                "name: " + super.getName() +
-                " Loyalty to tribe: " + super.getLoyaltyToTribe() +
+                super.toString() +
                 " fightClass='" + fightClass + '\'' +
                 ", rageLevel=" + rageLevel +
                 '}';
