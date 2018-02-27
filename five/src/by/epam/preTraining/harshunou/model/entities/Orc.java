@@ -1,5 +1,7 @@
 package by.epam.preTraining.harshunou.model.entities;
 
+import java.util.Objects;
+
 public class Orc extends DemonBloodCreature {
     private String fightClass;
     private int rageLevel;
@@ -47,5 +49,25 @@ public class Orc extends DemonBloodCreature {
                 " fightClass='" + fightClass + '\'' +
                 ", rageLevel=" + rageLevel +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Orc orc = (Orc) o;
+        return rageLevel == orc.rageLevel &&
+                Objects.equals(fightClass, orc.fightClass);
+    }
+
+    @Override
+    public int hashCode() {
+        int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + rageLevel;
+        result = prime * result + fightClass.hashCode();
+        return result;
+
     }
 }

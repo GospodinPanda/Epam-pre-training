@@ -53,8 +53,11 @@ public class Troll extends DemonBloodCreature {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(super.hashCode(), criticalChance, cannibal);
+        int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + criticalChance;
+        result = prime * result + (cannibal ? 1231 : 1237);
+        return result;
     }
 
     @Override

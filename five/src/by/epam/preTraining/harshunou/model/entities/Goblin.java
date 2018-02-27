@@ -40,7 +40,10 @@ public class Goblin extends DemonBloodCreature {
     @Override
     public int hashCode() {
 
-        return Objects.hash(super.hashCode(), explodes);
+        int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + (explodes ? 1231 : 1237);
+        return result;
     }
 
     @Override

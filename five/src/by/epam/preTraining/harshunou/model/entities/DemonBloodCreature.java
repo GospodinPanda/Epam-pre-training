@@ -94,8 +94,15 @@ public class DemonBloodCreature {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(name, strength, dexterity, constitution, intel, loyaltyToTribe);
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + strength;
+        result = prime * result + dexterity;
+        result = prime * result + constitution;
+        result = prime * result + intel;
+        result = prime * result + loyaltyToTribe;
+        result = prime * result + ((name==null?0:name.hashCode()));
+        return result;
     }
 
 

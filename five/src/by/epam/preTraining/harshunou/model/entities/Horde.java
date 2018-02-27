@@ -87,8 +87,17 @@ public class Horde {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(tribeName, orcs);
+        int result = 1;
+        int prime = 31;
+        result = prime * result + tribeName.hashCode();
+        try {
+            for (int i = 0; i < orcs.size(); i++) {
+                result = prime * result + orcs.get(i).hashCode();
+            }
+        } catch (WrongInputException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @Override
