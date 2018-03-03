@@ -9,6 +9,7 @@ import by.epam.preTraining.harshunou.model.entities.Troll;
 import java.util.Random;
 
 public class DemonBloodCreatureGenerator {
+    private static  DemonBloodCreatureGenerator generator;
     private final static int MAXIMUM_STAT = 10;
     private final static String[] ORC_NAMES = {"Bugrash",
             "Vukgilug", "Wubdagog", " Unrugagh", "Sarod", "Zalthu", "Vrograg", "Xurl", "Olumba", "Kubub", "Corgak",
@@ -20,7 +21,16 @@ public class DemonBloodCreatureGenerator {
     private final static int MAXIMUM_CRIT = 100;
     private final static int MAXIMUM_RAGE = 5;
 
-    public static DemonBloodCreature generateDemonBlooded() throws WrongInputException {
+    private DemonBloodCreatureGenerator() {
+    }
+
+    public static  DemonBloodCreatureGenerator getInstance(){
+        if(generator==null){
+            generator= new DemonBloodCreatureGenerator();
+        }
+        return generator;
+    }
+    public  DemonBloodCreature generateDemonBlooded() throws WrongInputException {
         Random random = new Random();
         DemonBloodCreature demonBloodCreature;
         switch (random.nextInt(3)) {

@@ -3,6 +3,11 @@ package by.epam.preTraining.harshunou.model.entities;
 import java.util.Objects;
 
 public class DemonBloodCreature {
+    private static final int DEFAULT_STRENGTH=0;
+    private static final int DEFAULT_DEXTERITY=0;
+    private static final int DEFAULT_CONSTITUTION=0;
+    private static final int DEFAULT_INTEL=0;
+    private static final int DEFAULT_LOYALTY=100;
     private String name;
     private int strength;
     private int dexterity;
@@ -21,11 +26,11 @@ public class DemonBloodCreature {
 
     public DemonBloodCreature(String name) {
         this.name = name;
-        this.strength = 0;
-        this.dexterity = 0;
-        this.constitution = 0;
-        this.intel = 0;
-        this.loyaltyToTribe = 100;
+        this.strength = DEFAULT_STRENGTH;
+        this.dexterity = DEFAULT_DEXTERITY;
+        this.constitution = DEFAULT_CONSTITUTION;
+        this.intel = DEFAULT_INTEL;
+        this.loyaltyToTribe = DEFAULT_LOYALTY;
 
     }
 

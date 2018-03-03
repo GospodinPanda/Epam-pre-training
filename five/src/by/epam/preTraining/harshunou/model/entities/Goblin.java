@@ -17,7 +17,6 @@ public class Goblin extends DemonBloodCreature {
 
     public Goblin(String name) {
         super(name);
-        explodes = false;
     }
 
     public boolean isExplodes() {

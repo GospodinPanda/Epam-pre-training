@@ -3,13 +3,15 @@ package by.epam.preTraining.harshunou.model.entities;
 import java.util.Objects;
 
 public class Orc extends DemonBloodCreature {
+    private static final int DEFAULT_RAGE_LEVEL=0;
+    private static final String DEFAULT_FIGHT_CLASS="undefined";
     private String fightClass;
     private int rageLevel;
 
     public Orc(String name) {
         super(name);
-        fightClass = "undefined";
-        rageLevel = 0;
+        fightClass = DEFAULT_FIGHT_CLASS;
+        rageLevel = DEFAULT_RAGE_LEVEL;
 
     }
 

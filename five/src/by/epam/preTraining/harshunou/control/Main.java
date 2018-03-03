@@ -9,8 +9,9 @@ import by.epam.preTraining.harshunou.view.Printer;
 public class Main {
 
     public static void main(String[] args) {
+
         try {
-            Horde horde = new Horde(OrcArmyGenerator.generateTribeName(), OrcArmyGenerator.generateHorde(new CustomArray<>()));
+            Horde horde = new Horde(OrcArmyGenerator.getInstance().generateTribeName(), OrcArmyGenerator.getInstance().generateHorde(new CustomArray<>()));
             Printer.print(horde);
             Printer.print(horde.calculateAvgLoyaltyOfHorde());
             Printer.print(horde.findWeakestCreature());
