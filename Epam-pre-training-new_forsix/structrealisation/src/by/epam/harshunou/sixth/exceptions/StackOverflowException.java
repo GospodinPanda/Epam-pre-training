@@ -1,6 +1,6 @@
 package by.epam.harshunou.sixth.exceptions;
 
-public class StackOverflowException extends AbstractStructuresException {
+public class StackOverflowException extends ContainerOverflowException {
     public StackOverflowException() {
         super();
     }

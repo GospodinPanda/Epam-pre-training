@@ -3,28 +3,11 @@ package by.epam.harshunou.sixth.model.container;
 import by.epam.harshunou.sixth.exceptions.StackIsEmptyException;
 import by.epam.harshunou.sixth.exceptions.StackOverflowException;
 
-public class StackOnList<T> implements AbstractStack {
+public class StackOnList<T> extends AbstractListStructure implements AbstractStack {
 
-    private ValueBox<T> first = null;
-    private int size = 0;
-
-    private void insertFirst(T data) {
-        ValueBox<T> box = new ValueBox<T>();
-        box.setValue(data);
-        box.setNext(first);
-        first = box;
-        size++;
-    }
-
-    private ValueBox<T> deleteFirst() {
-        ValueBox<T> temp = first;
-        first = first.getNext();
-        size--;
-        return temp;
-    }
 
     public void displayList() {
-        ValueBox<T> current = first;
+        ValueBox<T> current = head;
         while (current != null)
             current.toString();
         current = current.getNext();
@@ -32,7 +15,11 @@ public class StackOnList<T> implements AbstractStack {
 
     @Override
     public void push(Object ob) throws StackOverflowException {
-        insertFirst((T) ob);
+        ValueBox<T> box = new ValueBox<T>();
+        box.setValue((T)ob);
+        box.setNext(head);
+        head = box;
+        size++;
     }
 
     @Override
@@ -40,26 +27,10 @@ public class StackOnList<T> implements AbstractStack {
         if (isEmpty()) {
             throw new StackIsEmptyException("Stack is empty");
         }
-        return deleteFirst();
+        ValueBox<T> temp = head;
+        head = head.getNext();
+        size--;
+        return temp;
     }
 
-    @Override
-    public Object peek() throws StackIsEmptyException {
-        return first;
-    }
-
-    @Override
-    public int size() {
-        return size;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return first == null;
-    }
-
-    @Override
-    public boolean isFull() {
-        return false;
-    }
 }

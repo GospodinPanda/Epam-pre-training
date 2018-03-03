@@ -1,6 +1,6 @@
 package by.epam.harshunou.sixth.exceptions;
 
-public class QueueOverflowException extends AbstractStructuresException {
+public class QueueOverflowException extends ContainerOverflowException {
     public QueueOverflowException() {
         super();
     }

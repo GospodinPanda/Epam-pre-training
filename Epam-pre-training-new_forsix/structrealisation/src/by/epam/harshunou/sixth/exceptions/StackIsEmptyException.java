@@ -1,6 +1,6 @@
 package by.epam.harshunou.sixth.exceptions;
 
-public class StackIsEmptyException extends AbstractStructuresException {
+public class StackIsEmptyException extends ContainerIsEmptyException {
     public StackIsEmptyException() {
         super();
     }

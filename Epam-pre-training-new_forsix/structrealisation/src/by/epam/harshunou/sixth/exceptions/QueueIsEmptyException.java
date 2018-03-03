@@ -1,6 +1,6 @@
 package by.epam.harshunou.sixth.exceptions;
 
-public class QueueIsEmptyException extends AbstractStructuresException {
+public class QueueIsEmptyException extends ContainerIsEmptyException {
     public QueueIsEmptyException() {
         super();
     }
