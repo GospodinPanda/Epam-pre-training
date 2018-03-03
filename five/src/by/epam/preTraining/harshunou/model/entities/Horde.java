@@ -1,9 +1,7 @@
 package by.epam.preTraining.harshunou.model.entities;
 
-import by.epam.preTraining.harshunou.container.CustomArray;
 import by.epam.preTraining.harshunou.container.CustomArrayInterface;
 import by.epam.preTraining.harshunou.exceptions.WrongInputException;
-import by.epam.preTraining.harshunou.utils.OrcArmyGenerator;
 
 import java.util.Objects;
 

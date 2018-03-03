@@ -3,11 +3,11 @@ package by.epam.preTraining.harshunou.model.entities;
 import java.util.Objects;
 
 public class DemonBloodCreature {
-    private static final int DEFAULT_STRENGTH=0;
-    private static final int DEFAULT_DEXTERITY=0;
-    private static final int DEFAULT_CONSTITUTION=0;
-    private static final int DEFAULT_INTEL=0;
-    private static final int DEFAULT_LOYALTY=100;
+    private static final int DEFAULT_STRENGTH = 0;
+    private static final int DEFAULT_DEXTERITY = 0;
+    private static final int DEFAULT_CONSTITUTION = 0;
+    private static final int DEFAULT_INTEL = 0;
+    private static final int DEFAULT_LOYALTY = 100;
     private String name;
     private int strength;
     private int dexterity;
@@ -43,36 +43,32 @@ public class DemonBloodCreature {
         this.name = name;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
-    }
-
-    public void setConstitution(int constitution) {
-        this.constitution = constitution;
-    }
-
     public void setIntel(int intel) {
         this.intel = intel;
-    }
-
-    public void setLoyaltyToTribe(int loyaltyToTribe) {
-        this.loyaltyToTribe = loyaltyToTribe;
     }
 
     public int getStrength() {
         return strength;
     }
 
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
     public int getDexterity() {
         return dexterity;
     }
 
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
     public int getConstitution() {
         return constitution;
+    }
+
+    public void setConstitution(int constitution) {
+        this.constitution = constitution;
     }
 
     public int getintel() {
@@ -81,6 +77,10 @@ public class DemonBloodCreature {
 
     public int getLoyaltyToTribe() {
         return loyaltyToTribe;
+    }
+
+    public void setLoyaltyToTribe(int loyaltyToTribe) {
+        this.loyaltyToTribe = loyaltyToTribe;
     }
 
     @Override
@@ -106,7 +106,7 @@ public class DemonBloodCreature {
         result = prime * result + constitution;
         result = prime * result + intel;
         result = prime * result + loyaltyToTribe;
-        result = prime * result + ((name==null?0:name.hashCode()));
+        result = prime * result + ((name == null ? 0 : name.hashCode()));
         return result;
     }
 
@@ -118,6 +118,6 @@ public class DemonBloodCreature {
                 ", dexterity=" + dexterity +
                 ", constitution=" + constitution +
                 ", intel=" + intel +
-                ", loyaltyToTribe=" + loyaltyToTribe+ " ";
+                ", loyaltyToTribe=" + loyaltyToTribe + " ";
     }
 }

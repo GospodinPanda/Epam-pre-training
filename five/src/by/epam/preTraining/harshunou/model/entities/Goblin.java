@@ -1,7 +1,5 @@
 package by.epam.preTraining.harshunou.model.entities;
 
-import java.util.Objects;
-
 public class Goblin extends DemonBloodCreature {
     private boolean explodes;
 

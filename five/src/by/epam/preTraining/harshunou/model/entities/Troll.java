@@ -1,7 +1,5 @@
 package by.epam.preTraining.harshunou.model.entities;
 
-import java.util.Objects;
-
 public class Troll extends DemonBloodCreature {
     private int criticalChance;
     private boolean cannibal;
