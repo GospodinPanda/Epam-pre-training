@@ -40,7 +40,7 @@ public class TextWorker {
     }
 
     public String deleteConsonantWords(int length) {
-        return textParser.getText().toString().replaceAll("\\b[\\s][^aAuUiIoOyY][a-zA-Z]{" + (length - 1) + "}[.|?|!]?\\b", "");
+        return textParser.getText().toString().replaceAll("\\b[\\s][^(?i)auioy][a-zA-Z]{" + (length - 1) + "}[.|?|!]?\\b", "");
     }
 
 }

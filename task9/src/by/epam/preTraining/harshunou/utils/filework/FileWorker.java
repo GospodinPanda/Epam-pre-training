@@ -1,7 +1,8 @@
 package by.epam.preTraining.harshunou.utils.filework;
 
-import java.io.FileNotFoundException;
+import by.epam.preTraining.harshunou.exceptions.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class FileWorker {
@@ -13,8 +14,8 @@ public class FileWorker {
                 String nextLine = scanner.nextLine().trim();
                 result = result.append(nextLine);
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+           throw new FileNotFoundException("File is not found or corrupted");
         }
         return result.toString().trim();
     }
